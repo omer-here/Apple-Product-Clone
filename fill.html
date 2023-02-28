@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.98.0">
+    <title>Check Out Page</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/checkout/">
+
+    <link rel="icon" type="image/x-icon" href="apple.svg">
+
+    
+
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    
+
+
+    
+    <!-- Custom styles for this template -->
+    <link href="form-validation.css" rel="stylesheet">
+  </head>
+  <body class="bg-light">
+
+    <div class="container py-3">
+      <header>
+        <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+          <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+            <img
+            src="apple.svg"
+            width="40"
+            height="32"
+            class="me-2"
+            viewBox="0 0 118 94"
+            role="img"
+          ></img>
+            <span class="fs-4">Apple</span>
+          </a>
+    
+          <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+            <a class="me-3 py-2 text-dark text-decoration-none" href="product.html">Features</a>
+            <!-- <a class="me-3 py-2 text-dark text-decoration-none" href="#">Accessories</a> -->
+            <a class="me-3 py-2 text-primary text-decoration-none" href="#">Shop</a>
+            <a class="py-2 text-dark text-decoration-none" href="pricing.html">Pricing</a>
+          </nav>
+        </div>
+    
+<div class="container">
+  <main>
+    <div class="py-5 text-center">
+      <img class="d-block mx-auto mb-4" src="apple.svg" alt="" width="72" height="57">
+      <h2>Sign-Up form</h2>
+      <p class="lead">Please provide a valid information for signing in!</p>
+    </div>
+
+    <div class="row g-5">
+      <div class="col-md-5 col-lg-4 order-md-last">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-primary">Your cart</span>
+          <span class="badge bg-primary rounded-pill">3</span>
+        </h4>
+        <ul class="list-group mb-3">
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 id="phone1" class="my-0">Iphone 14 pro Max</h6>
+              <small class="text-muted">512 GB</small>
+            </div>
+            <span class="text-muted">$2000</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">Airpod 4</h6>
+              <small class="text-muted">Black</small>
+            </div>
+            <span class="text-muted">$500</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">Accidental Cover</h6>
+              <small class="text-muted">Transparent</small>
+            </div>
+            <span class="text-muted">$200</span>
+          </li>
+         
+          <li class="list-group-item d-flex justify-content-between">
+            <span>Total (USD)</span>
+            <strong>$2700</strong>
+          </li>
+        </ul>
+
+        <form class="card p-2">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Promo code">
+            <button type="submit" class="btn btn-secondary">Redeem</button>
+          </div>
+        </form>
+      </div>
+
+        
+      <div class="col-md-7 col-lg-8">
+        <h4 class="mb-3">Required information</h4>
+        <form class="needs-validation" action="connect.php" method="post" novalidate>
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="firstName" class="form-label">First name</label>
+              <input type="text" class="form-control" id="firstName" name="firstName" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                Valid first name is required.
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="lastName" class="form-label">Last name</label>
+              <input type="text" class="form-control" id="lastName" name="lastName" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                Valid last name is required.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="username" class="form-label">Username</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text">@</span>
+                <input type="text" class="form-control" id="username" name="userName" placeholder="Username" required>
+              <div class="invalid-feedback">
+                  Your username is required.
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com">
+              <div class="invalid-feedback">
+                Please enter a valid email.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="address" class="form-label">Address</label>
+              <input type="text" class="form-control" id="address" name="address" placeholder="1234 Main St" required>
+              <div class="invalid-feedback">
+                Please enter your address.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="address2" class="form-label">Address 2 <span class="text-muted">(Optional)</span></label>
+              <input type="text" class="form-control" id="address2"  placeholder="Apartment or suite">
+            </div>
+
+            <div class="col-md-5">
+              <label for="country" class="form-label">Country</label>
+              <select class="form-select" id="country" name="country" required>
+                <option value="">Choose...</option>
+                <option>Pakistan</option>
+                <option>United Kingdom</option>
+                <option>United States</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid country.
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <label for="state" class="form-label">State</label>
+              <select class="form-select" id="state" name="state" required>
+                <option value="">Choose...</option>
+                <option>Islamabad</option>
+                <option>London</option>
+                <option>California</option>
+              </select>
+              <div class="invalid-feedback">
+                Please provide a valid state.
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <label for="zip" class="form-label">Zip</label>
+              <input type="text" class="form-control" id="zip" name="zip" placeholder="" required>
+              <div class="invalid-feedback">
+                Zip code required.
+              </div>
+            </div>
+          </div>
+
+          <hr class="my-4">
+
+          <h4 class="mb-3">Payment</h4>
+
+          <div class="my-3">
+            <div class="form-check">
+              <input id="credit" name="paymentMethod" type="radio" value="credit" class="form-check-input" checked required>
+              <label class="form-check-label" for="credit">Credit card</label>
+            </div>
+            <div class="form-check">
+              <input id="debit" name="paymentMethod" type="radio" value="debit" class="form-check-input" required>
+              <label class="form-check-label" for="debit">Debit card</label>
+            </div>
+            <div class="form-check">
+              <input id="paypal" name="paymentMethod" type="radio" value="paypal" class="form-check-input" required>
+              <label class="form-check-label" for="paypal">PayPal</label>
+            </div>
+          </div>
+
+          <div class="row gy-3">
+            <div class="col-md-6">
+              <label for="cc-name" class="form-label">Name on card</label>
+              <input type="text" class="form-control" id="cc-name" placeholder="" required>
+              <small class="text-muted">Full name as displayed on card</small>
+              <div class="invalid-feedback">
+                Name on card is required
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <label for="cc-number" class="form-label">Credit card number</label>
+              <input type="text" class="form-control" id="cc-number" placeholder="" required>
+              <div class="invalid-feedback">
+                Credit card number is required
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <label for="cc-expiration" class="form-label">Expiration</label>
+              <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+              <div class="invalid-feedback">
+                Expiration date required
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <label for="cc-cvv" class="form-label">CVV</label>
+              <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+              <div class="invalid-feedback">
+                Security code required
+              </div>
+            </div>
+          </div>
+
+          <hr class="my-4">
+          <button class="w-100 btn btn-primary btn-lg" type="submit">Save</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  
+  <footer class="pt-4 my-md-5 pt-md-5 border-top">
+    <div class="row">
+      <div class="col-12 col-md">
+            <img
+              class="mb-2"
+              src="apple.svg"
+              alt=""
+              width="24"
+              height="19"
+            />
+            <a>Apple</a>
+        <small class="d-block mb-3 text-muted">&copy; 2017–2022</small>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Features</h5>
+        <ul class="list-unstyled text-small">
+          <li class="mb-1">
+            <a class="link-secondary text-decoration-none" href="#"
+              >Cool stuff</a
+            >
+          </li>
+          <li class="mb-1">
+            <a class="link-secondary text-decoration-none" href="#"
+              >Random feature</a
+            >
+          </li>
+          <li class="mb-1">
+            <a class="link-secondary text-decoration-none" href="#"
+              >Team feature</a
+            >
+          </li>
+          <li class="mb-1">
+            <a class="link-secondary text-decoration-none" href="#"
+              >Stuff for developers</a
+            >
+          </li>
+          <li class="mb-1">
+            <a class="link-secondary text-decoration-none" href="#"
+              >Another one</a
+            >
+          </li>
+          <li class="mb-1">
+            <a class="link-secondary text-decoration-none" href="#"
+              >Last time</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Resources</h5>
+        <ul class="list-unstyled text-small">
+          <li class="mb-1">
+            <a class="link-secondary text-decoration-none" href="#"
+              >Resource</a
+            >
+          </li>
+          <li class="mb-1">
+            <a class="link-secondary text-decoration-none" href="#"
+              >Resource name</a
+            >
+          </li>
+          <li class="mb-1">
+            <a class="link-secondary text-decoration-none" href="#"
+              >Another resource</a
+            >
+          </li>
+          <li class="mb-1">
+            <a class="link-secondary text-decoration-none" href="#"
+              >Final resource</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>About</h5>
+        <ul class="list-unstyled text-small">
+          <li class="mb-1">
+            <a class="link-secondary text-decoration-none" href="#">Team</a>
+          </li>
+          <li class="mb-1">
+            <a class="link-secondary text-decoration-none" href="#"
+              >Locations</a
+            >
+          </li>
+          <li class="mb-1">
+            <a class="link-secondary text-decoration-none" href="#"
+              >Privacy</a
+            >
+          </li>
+          <li class="mb-1">
+            <a class="link-secondary text-decoration-none" href="#"
+              >Terms</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</div>
+
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="new.js" type="text/javascript"></script>     
+    <script src="form-validation.js"></script>
+  </body>
+</html>
